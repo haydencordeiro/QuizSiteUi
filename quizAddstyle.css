@@ -288,3 +288,25 @@ html {
   align-items: center;
   justify-content: space-around;
 }
+.LeaderBoard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ccc;
+  width: 80%;
+  margin-bottom: 2rem;
+  /* border-radius: 1rem; */
+}
+.LeaderBoardItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.LeaderBoardItem:hover {
+  background-color: grey;
+  border-bottom: 1px solid #ffffff;
+}
