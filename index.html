@@ -39,7 +39,9 @@
 
         <div class="headerQuizQuestion">
             <h3>Quiz Editor</h3>
-            <a href="" style="text-decoration: none;color:black;font-size: medium;">New Question</a>
+            <a style="text-decoration: none;color:black;font-size: medium;" onclick=" customModal(); return false"><i
+                    class="fas fa-plus"
+                    style="border:1px solid black;padding:0.2rem;border-radius:25%;background-color: black;color: white;"></i></a>
         </div>
 
         <div class="quizQuestions">
@@ -292,9 +294,76 @@
 
         </div>
     </div>
-    <br>
+    <div class="coverall customHide " id="over">
+        <span> </span>
+    </div>
+    <div class="customModal customHide" id="inputModal">
+        <dic class="modalHeader">
+            <h3>Add a question</h3>
+        </dic>
+        <div class="modalContent">
+            <form action="" id="ModalForm">
+                <textarea name="question" id="" cols="30" rows="5" placeholder="Enter The Question"
+                    style="text-align: center; justify-content: center;border: 1px solid rgba(0,0,0,0.2);border-radius: 5px;margin-top: 0rem;margin-bottom: 0rem;"></textarea>
+
+                <div style="display: flex;justify-content:space-around;">
+                    <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="text"
+                        style="margin-bottom:0.1rem;padding: 0.1rem;border: 1px solid rgba(0,0,0,0.2);border-radius: 5px;padding-left:0.5rem  ;"
+                        placeholder="Option 1">
+                </div>
+                <div style="display: flex;justify-content:space-around;">
+                    <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="text"
+                        style="margin-bottom:0.1rem;padding: 0.1rem;border: 1px solid rgba(0,0,0,0.2);border-radius: 5px;padding-left:0.5rem  ;"
+                        placeholder="Option 2">
+                </div>
+                <div style="display: flex;justify-content:space-around;">
+                    <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="text"
+                        style="margin-bottom:0.1rem;padding: 0.1rem;border: 1px solid rgba(0,0,0,0.2);border-radius: 5px;padding-left:0.5rem  ;"
+                        placeholder="Option 3">
+                </div>
+                <div style="display: flex;justify-content:space-around;">
+                    <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="text"
+                        style="margin-bottom:0.1rem;padding: 0.1rem;border: 1px solid rgba(0,0,0,0.2);border-radius: 5px;padding-left:0.5rem  ;"
+                        placeholder="Option 4">
+                </div>
+
+            </form>
+        </div>
+        <div class="modalFotter">
+            <button onclick="customModal()" style="background-color: #EE4F73;">Close</button>
+            <button onclick="document.getElementById('ModalForm').submit()"
+                style="background-color: #01D38C;">Add</button>
+        </div>
+    </div>
+
 
 </body>
+<script>
+    const over = document.getElementById('over');
+    const modal = document.getElementById('inputModal');
+    function customModal() {
+        console.log('called');
+        over.classList.toggle('customHide');
+        modal.classList.toggle('customHide');
+    }
+</script>
+
 <script src="index.js"></script>
 <script>
     $(document).ready(function () {
