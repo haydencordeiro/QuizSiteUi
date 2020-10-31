@@ -61,7 +61,7 @@ html {
 }
 
 .questionAns .options {
-  background-color: chocolate;
+  background-color: inherit;
   min-width: 50%;
   padding: 1rem;
 }
